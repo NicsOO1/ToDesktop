@@ -52,3 +52,15 @@ setupElement(line1, true, 0.15);
 setupElement(line2, false, 0.15);
 setupElement(line3, true, 0.15);
 setupElement(line4, true, 0.8);
+
+const faqBoxes = document.querySelectorAll(".fq-box");
+faqBoxes.forEach(faqBox => {
+  faqBox.addEventListener("click", () => {
+    const currentFaq = faqBox.querySelector(".def-sec");
+    const arrow = faqBox.querySelector(".arrow");
+    currentFaq.classList.toggle('hidden');
+    arrow.classList.toggle('rotate-180');
+  });
+
+});
+
